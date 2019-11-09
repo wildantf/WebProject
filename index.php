@@ -7,7 +7,7 @@ include "templates/header.php" ?>
     <div class="grid-container">
         <div class="left-content">
             <h1><b>Tingkatkan Skillmu Dengan Mengikuti Berbagai Kursus yang Ada.</b></h1>
-            <h2><i>Mon Ajher Kaangguy aplikasi riah E-Kepenter</i></h2>
+            <h2><i>Manabi Ajher Kaangguy Web Panèka E-Kepenter</i></h2>
         </div>
         <div class="right-content">
             <div class="form">
