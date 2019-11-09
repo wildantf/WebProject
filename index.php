@@ -1,9 +1,34 @@
-<?php include "templates/header.php" ?>
-<div class="jumbotron"></div>
-<div class="container">
-    <p><b>This example demonstrates how to slide down a navbar when the user starts to scroll the page.</b></p>
-    <p>Scroll down this frame to see the effect!</p>
-    <p>Scroll to the top to hide the navbar.</p>
-    <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<?php
+session_start();
+$page = 'index';
+include "templates/header.php" ?>
+<!-- jumbotron  -->
+<div class="jumbotron">
+    <div class="grid-container">
+        <div class="left-content">
+            <h1><b>Tingkatkan Skillmu Dengan Mengikuti Berbagai Kursus yang Ada.</b></h1>
+            <h2><i>Mon Ajher Kaangguy aplikasi riah E-Kepenter</i></h2>
+        </div>
+        <div class="right-content">
+            <div class="form">
+                <form action="login" method="POST">
+                    <div class="input-container">
+                        <h4>Login</h4>
+                        <div class="input-wrapper">
+                            <input class="input-field" type="email" name="email" placeholder="Email">
+                            <label for="email" class="fa fa-at input-icon"></label>
+                        </div>
+                        <div class="input-wrapper">
+                            <input class="input-field" type="password" name="password" placeholder="Password">
+                            <label for="password" class="fa fa-key input-icon"></label>
+                        </div>
+                        <input type="submit" name="login" value="login">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+<!-- akhir -->
+
 <?php include "templates/footer.php" ?>

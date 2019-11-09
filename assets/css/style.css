@@ -12,14 +12,16 @@ body {
 
 }
 
+/* NAVBAR CSS */
 .menubarMain {
     position: absolute;
+    display: block;
     width: 100%;
     height: 47px;
     border-bottom: solid #a1a1a1;
     border-width: thin;
-    background-color: #ffffff;
-    opacity: 0.5;
+    background: rgba(245, 242, 242, 0.5);
+    z-index: 10;
 }
 
 .menubar {
@@ -27,11 +29,10 @@ body {
     height: 47px;
     display: block;
     background-color: #f5f5f5;
-    box-shadow: 0px 5px 10px #dadada;
+    box-shadow: 0px 4px 10px #c2c2c2;
     transition: top 0.5s;
     top: -60px;
     position: fixed;
-    overflow: hidden;
     z-index: 100;
 }
 
@@ -48,7 +49,7 @@ body {
 
 .menubar a:hover,
 .menubarMain a:hover {
-    background-color: #dddddd;
+    background-color: #e9e9e9;
     color: black;
     border-bottom: 3px solid red;
 }
@@ -61,8 +62,9 @@ body {
     border-bottom: 3px solid red;
 }
 
+/* isian Menu  */
 .listMenu {
-    margin: 0 50px 0 50px;
+    margin: 0 100px 0 100px;
 }
 
 .listMenu a:first-child img {
@@ -85,8 +87,12 @@ body {
 }
 
 .menubar-right a.btn {
-    background-color: #dadada;
-    border: solid #d4d4d4;
+    margin-top: 5.5px;
+    margin-left: 1px;
+    width: 50px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: solid #7e7e7e;
     border-width: thin;
     border-radius: 9px;
     text-decoration: none;
@@ -104,16 +110,226 @@ a.btn.register {
     opacity: 1;
 }
 
-.container {
-    display: block;
-    padding: 40px 40px 700px;
-    font-size: 30px;
+.menubar-right a.foto-profile img {
+    position: absolute;
+    top: 4px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50px;
+    opacity: 1;
 }
 
+.menubar-right a.foto-profile:hover {
+    border: none;
+    background: transparent;
+}
+
+/* akhir isian menu */
+
+/* css untuk menu dropdown */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 201;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+
+}
+
+.dropdown-content a:hover {
+    border: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* akhir dropdown */
+/* Akhir Navbar CSS */
+
+/* Content CSS */
+
 .jumbotron {
-    background-image: url("../img/planning.jpg");
+    position: relative;
+    top: 0;
+    background-image: url("../img/jumbotron.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     height: auto;
-    padding: 0 0 1000px
+    padding: 0 0 1000px;
+    z-index: 1;
 }
+
+.jumbotron h1 {
+    margin-top: 230px;
+    color: #303030;
+    font-family: 'Pacifico', 'sans-serif';
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0 0 15px #b4b4b4;
+}
+
+.jumbotron h2 {
+    text-align: center;
+    font-family: 'Exo 2', 'sans-serif';
+    color: #e4e4e4;
+    text-shadow: 0 0 10px #4d4d4d;
+    font-weight: normal;
+
+}
+
+
+/* FORM */
+.jumbotron .right-content .form {
+    margin: 40px 0;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(187, 187, 187, 0.8);
+    border-radius: 15px;
+    border: 2px solid #3a3a3a;
+}
+
+.form .input-container {
+    margin: 0 19px;
+}
+
+.form .input-icon {
+    position: absolute;
+    left: 5px;
+    top: calc(50% - 0.5em);
+    /* Keep icon in center of input, regardless of the input height */
+}
+
+.form .input-wrapper input {
+    padding-left: 22px;
+    width: 240px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #a5a5a5;
+}
+
+.form input[type='email'],
+input[type='password'] {
+    background-color: #c2c2c2;
+}
+
+.form .input-wrapper {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+
+.btn {}
+
+/* akhir Content CSS */
+/* FORM  */
+
+
+/* akhir dari css form */
+
+
+/* Mengatur grid layout */
+.grid-container {
+    position: relative;
+    width: 80%;
+    top: 60px;
+    display: grid;
+    grid-template-columns: 250px 500px 300px;
+    padding: 10px;
+    margin: 0px auto 0;
+    gap: 20px;
+}
+
+.sidebar-left {
+    grid-column: 1;
+}
+
+.bar-center {
+    grid-column: 2;
+}
+
+.sidebar-right {
+    grid-column: 3;
+}
+
+.left-content {
+    grid-column: 1/span 2;
+}
+
+.right-content {
+    grid-column: 3;
+}
+
+.content {
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+}
+
+.sidebar-left .content {
+    min-height: 50px;
+}
+
+.sidebar-left .content img {
+    float: left;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border: 1px solid #9e9e9e;
+    border-radius: 40px;
+    margin-right: 15px;
+}
+
+.sidebar-left .content li a:hover {
+    color: #4d4d4d;
+}
+
+.sidebar-left .content a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+
+.sidebar-left .content h3,
+.sidebar-left .content ul {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a3a3a3;
+}
+
+.sidebar-left .content .update {
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* akhri Footer */
